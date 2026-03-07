@@ -88,13 +88,21 @@ The code to measure the raw value returned by an analog input port uses
 the `analogRead(pin)` function, which returns a value between $0..4096$:
 
 ```c++
-#include <Arduino.h>
+#include <Arduino.h>
 
-const int pin_ldr = 25;
+const int pin_ldr = 25;
 
-void setup()
+void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(115200);
+}
+
+void loop()
+{
+  int ldr_val = analogRead(pin_ldr);
+  Serial.print("LDR raw value: ");
+  Serial.println(ldr_val);
+  delay(100);
 }
 
 void loop()
