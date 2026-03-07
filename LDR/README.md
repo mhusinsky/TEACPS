@@ -104,14 +104,6 @@ void loop()
   Serial.println(ldr_val);
   delay(100);
 }
-
-void loop()
-{
-  int ldr_val = analogRead(pin_ldr);
-  Serial.print("LDR raw value: ");
-  Serial.println(ldr_val);
-  delay(100);
-}
 ```
 
 **Exercise:** try converting the returned value into a voltage!
